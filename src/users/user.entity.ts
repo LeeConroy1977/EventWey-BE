@@ -42,7 +42,7 @@ export class User {
   @Column('simple-array', { nullable: true })
   tags: string[];
 
-  @ManyToMany(() => User, (user) => user.connections, { cascade: true })
+  @ManyToMany(() => User, (user) => user.connections)
   @JoinTable()
   connections: User[];
 
